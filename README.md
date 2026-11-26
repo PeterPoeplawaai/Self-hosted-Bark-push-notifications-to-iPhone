@@ -6,6 +6,8 @@ A practical guide to running your own [Bark](https://github.com/Finb/Bark) push 
 >
 > **Example environment used throughout:** server private IP `10.0.0.10`, host port `8081`, reachable only over a WireGuard tunnel. Replace those with your own values.
 
+![Bark Banner](banner-bark-notifications.png)
+
 ---
 
 ## Contents
