@@ -219,6 +219,7 @@ No VPN? Bind to a LAN IP (`192.168.x.y`) and only use the app at home, or read t
    ```
 
 4. Tap the **✓** button.
+5. Enable **Notifications** on Bark's home screen! (crucial step!)
 
 On save, the app calls `GET /ping`. If it succeeds you get "Added successfully" and the new server becomes the current one. Watch the server log while you do it:
 
@@ -291,7 +292,7 @@ Treat this key like a password: it is the only credential needed to push to that
 From the server:
 
 ```bash
-curl -s -X POST http://127.0.0.1:8081/push \
+curl -s -X POST http://10.0.0.10:8081/push \
   -H 'Content-Type: application/json; charset=utf-8' \
   -d '{
     "device_key": "YOUR_DEVICE_KEY",
