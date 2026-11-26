@@ -193,7 +193,7 @@ There is no web UI and there are no accounts: anyone who can reach the port and 
 1. **Bind to a private address** (as above) — never publish `0.0.0.0:8081`.
 2. **Do not open the port publicly.** If you use a cloud VCN security list / firewall, do not add an ingress rule for 8081.
 
-A gotcha worth knowing: **Docker-published ports bypass ufw**, because Docker inserts its own iptables rules. A `ufw allow`/`ufw deny` rule is not what protects you here — the specific bind address is.
+A gotcha worth knowing: **Docker-published ports bypass iptables/ufw**, because Docker inserts its own iptables rules. A `iptables/ufw allow`/`iptables/ufw deny` rule is not what protects you here — the specific bind address is.
 
 If the phone reaches the server over a VPN:
 
