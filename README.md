@@ -342,16 +342,18 @@ Install the helper:
 command -v jq || sudo apt-get update && sudo apt-get install -y jq
 ```
 
+Create the script:
 ```bash
-`sudo /usr/local/bin/notify.sh`:
+sudo nano /usr/local/bin/notify.sh:
 ```
 
+Paste the script:
 ```bash
 #!/usr/bin/env bash
 # usage: notify.sh "Title" "Body" [level] [url]
 set -euo pipefail
 
-BASE_URL="${BARK_URL:-http://127.0.0.1:8081}"
+BASE_URL="${BARK_URL:-http://10.0.0.10:8081}"
 KEY_FILE="${BARK_KEY_FILE:-/etc/bark/device_key}"
 
 if [ "$#" -lt 2 ]; then
@@ -381,8 +383,13 @@ curl -fsS -X POST "$BASE_URL/push" \
 echo "sent"
 ```
 
+Set the correct file permissions:
 ```bash
 sudo chmod 755 /usr/local/bin/notify.sh
+```
+
+Check if a test notification works:
+```bash
 notify.sh "Bark" "script test" timeSensitive
 ```
 
@@ -405,10 +412,10 @@ Dashboard → **Settings → Notifications → Setup Notification** → type **B
 | Field | Value |
 |---|---|
 | Notification Type | Bark |
-| Friendly Name | `Bark Kuma Alert` (anything) |
+| Friendly Name | `Bark Kuma Alert` (or whatever you like) |
 | Bark API Version | **v2** |
 | Bark Endpoint | `http://10.0.0.10:8081/YOUR_DEVICE_KEY` |
-| Bark Group | `UptimeKuma` (blank gives the same default) |
+| Bark Group | `UptimeKuma` (or whatever you like) |
 | Bark Sound | `alarm`, or leave blank for `telegraph` |
 | Default enabled | your choice |
 | Apply on all existing monitors | your choice |
