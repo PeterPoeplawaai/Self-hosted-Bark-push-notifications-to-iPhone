@@ -342,7 +342,9 @@ Install the helper:
 command -v jq || sudo apt-get update && sudo apt-get install -y jq
 ```
 
-`/usr/local/bin/notify.sh`:
+```bash
+`sudo /usr/local/bin/notify.sh`:
+```
 
 ```bash
 #!/usr/bin/env bash
