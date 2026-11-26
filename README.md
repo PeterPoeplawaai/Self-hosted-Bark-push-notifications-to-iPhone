@@ -125,7 +125,7 @@ services:
     container_name: bark
     restart: unless-stopped
     environment:
-      TZ: Europe/Berlin                 # change to your timezone
+      TZ: Europe/Amsterdam                 # change to your timezone
       BARK_SERVER_ADDRESS: "0.0.0.0:8080"
       BARK_SERVER_DATA_DIR: "/data"
     volumes:
@@ -134,7 +134,7 @@ services:
       # Bind to the PRIVATE address only. Change the IP to your host's.
       - "10.0.0.10:8081:8080"
     healthcheck:
-      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1:8080/ping >/dev/null || exit 1"]
+      test: ["CMD-SHELL", "wget -qO- http://10.0.0.10:8080/ping >/dev/null || exit 1"]
       interval: 60s
       timeout: 5s
       retries: 3
