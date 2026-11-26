@@ -587,10 +587,10 @@ Rollback is changing the tag back. If **all** devices suddenly stop receiving pu
 
 ```bash
 # health
-curl -s http://127.0.0.1:8081/ping
+curl -s http://10.0.0.10:8081/ping
 
 # test push
-curl -s -X POST http://127.0.0.1:8081/push \
+curl -s -X POST http://10.0.0.10:8081/push \
   -H 'Content-Type: application/json' \
   -d '{"device_key":"KEY","title":"Hi","body":"There"}'
 
