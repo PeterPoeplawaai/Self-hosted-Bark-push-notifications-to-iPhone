@@ -600,5 +600,3 @@ docker compose -f /opt/bark/docker-compose.yml logs -f bark
 # restart
 docker compose -f /opt/bark/docker-compose.yml restart bark
 ```
-
-**Kuma in one line:** type `Bark`, version `v2`, endpoint `http://<server-ip>:<port>/<device-key>`.
