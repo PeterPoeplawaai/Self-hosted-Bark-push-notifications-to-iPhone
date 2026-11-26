@@ -172,8 +172,8 @@ init apns client success...
 ## 6. Verify the server
 
 ```bash
-curl -s http://127.0.0.1:8081/ping ; echo
-curl -s http://127.0.0.1:8081/info ; echo
+curl -s http://10.0.0.10:8081/ping ; echo
+curl -s http://10.0.0.10:8081/info ; echo
 ```
 
 Both return JSON with `"code":200`. Then confirm the bind address:
