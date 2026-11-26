@@ -333,7 +333,8 @@ sudo chown root:"$USER" /etc/bark/device_key
 sudo chmod 640 /etc/bark/device_key
 ```
 
-If you run the script as `ubuntu`, a root-only `600` key means you need `sudo` every time. Group-reading it (`640`, directory `750`) avoids that; other users on the box still cannot read it.
+> [!NOTE]
+> If you run the script as `ubuntu`, a root-only `600` key means you need `sudo` every time. Group-reading it (`640`, directory `750`) avoids that; other users on the box still cannot read it.
 
 Install the helper:
 
